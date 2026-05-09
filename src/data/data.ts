@@ -31,7 +31,7 @@ export const projects = [
     problem: "Managing personal finances is messy — scattered spreadsheets, no insights, and zero visibility into spending patterns.",
     approach: "Built a full-stack app with JWT-based auth, transaction tracking, budget categories, and Chart.js visualisations. Designed a glass-morphism dark UI with multi-currency support.",
     tech: ["React", "TypeScript", "Express", "Node.js", "MySQL", "JWT", "Chart.js"],
-    github: "https://github.com/amritrajyadav",
+    github: "https://github.com/amrit-11022007/FinanceApp",
     live: null,
   },
   {
@@ -42,7 +42,7 @@ export const projects = [
     problem: "Understanding Git internals by re-implementing core features from scratch — init, add, commit, log.",
     approach: "Used Python's os and hashlib modules to replicate Git's object model. Stored blobs, trees, and commits as hashed objects in a .myvcs directory. Planning a C++ rewrite.",
     tech: ["Python", "File I/O", "SHA-1 Hashing", "CLI"],
-    github: "https://github.com/amritrajyadav",
+    github: "",
     live: null,
   },
   {
@@ -53,7 +53,7 @@ export const projects = [
     problem: "People can't keep up with habits and procastinate",
     approach: "Used React and typescript to make a streak based app. People keep doing it because of fear of losing habits",
     tech: ["React", "TypeScript", "Tailwind"],
-    github: "https://github.com/amritrajyadav",
+    github: "",
     live: null,
   }
 ];

@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { personal } from "../data/data";
+import MagneticButton from "./MagneticButton";
 
 // Each blob: pos (%), size (px), color, animation duration, keyframe deltas
 const BLOBS = [
@@ -96,22 +97,8 @@ export default function Hero() {
 
         {/* CTA buttons */}
         <div className="flex flex-wrap gap-4">
-          <button
-            onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })}
-            className="rounded-[12px] bg-[var(--blue)] px-7 py-3 border-none cursor-pointer shadow-[0_8px_30px_rgba(41,121,255,0.35)] transition-transform duration-200 ease-in-out font-['DM_Sans',sans-serif] font-semibold text-[0.9rem] text-white"
-            onMouseEnter={e => (e.currentTarget.style.transform = "translateY(-2px)")}
-            onMouseLeave={e => (e.currentTarget.style.transform = "translateY(0)")}
-          >
-            View Projects →
-          </button>
-          <button
-            onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
-            className="rounded-[12px] bg-[rgba(255,255,255,0.7)] px-7 py-3 border border-[rgba(41,121,255,0.25)] cursor-pointer backdrop-blur-md transition-colors duration-200 ease-in-out font-['DM_Sans',sans-serif] font-semibold text-[0.9rem] text-[var(--blue)]"
-            onMouseEnter={e => (e.currentTarget.style.background = "rgba(41,121,255,0.08)")}
-            onMouseLeave={e => (e.currentTarget.style.background = "rgba(255,255,255,0.7)")}
-          >
-            Get in Touch
-          </button>
+          <MagneticButton text="View Projects →" onClick={() => document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })} />
+          <MagneticButton text="About Me →" onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })} />
         </div>
       </div>
 
