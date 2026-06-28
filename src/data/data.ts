@@ -22,7 +22,8 @@ async function loadCodeforces() {
   }
 }
 
-const rating = loadCodeforces().then((data => data.result[0].rating));
+const data = await loadCodeforces();
+const rating = data?.result[0].rating;
 
 export const personal = {
   name: "Amrit Raj Yadav",
