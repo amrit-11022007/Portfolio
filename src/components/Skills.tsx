@@ -87,8 +87,7 @@ export default function Skills() {
           </div>
 
           <p className="text-[0.825rem] leading-[1.7] text-[var(--text-muted)]">
-            Next.js · Docker · AWS (deployment) · C++ · OpenGL / GLSL shaders ·
-            DSA
+            DSA · Docker · AWS (deployment) · Postgre · Next.js
           </p>
         </div>
       </div>

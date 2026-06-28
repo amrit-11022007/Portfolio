@@ -107,7 +107,7 @@ export default function Hero() {
         <div className="text-[0.7rem] uppercase tracking-[0.08em] font-semibold text-[var(--text-muted)]">Currently</div>
         <div className="flex items-center gap-2">
           <div className="h-2 w-2 flex-shrink-0 rounded-full bg-[#22c55e] shadow-[0_0_8px_rgba(34,197,94,0.6)]" />
-          <span className="text-[0.8rem] font-semibold text-[var(--text-primary)]">Learning C++.</span>
+          <span className="text-[0.8rem] font-semibold text-[var(--text-primary)]">Learning DSA.</span>
         </div>
         <div className="h-px bg-[rgba(41,121,255,0.1)]" />
         <div className="text-[0.75rem] text-[var(--text-muted)]">React + TypeScript frontend</div>

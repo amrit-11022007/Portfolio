@@ -85,7 +85,7 @@ export default function About() {
             🏆
           </div>
           <div className="mb-4 text-[0.7rem] uppercase tracking-[0.1em] font-bold text-[var(--blue)]">
-            Other Achievements
+            Achievements
           </div>
           <ul className="flex flex-col gap-2 list-none">
             {about.achievements.map((a, i) => (
