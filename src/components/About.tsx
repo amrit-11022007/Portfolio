@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import { about, personal } from "../data/data";
+import { useEffect, useRef, useState } from "react";
+import { about, personal, getCodeforcesRating } from "../data/data";
 
 function useReveal(count: number) {
   const refs = useRef<(HTMLDivElement | null)[]>([]);
@@ -18,6 +18,29 @@ function useReveal(count: number) {
 
 export default function About() {
   const cardRefs = useReveal(10);
+  const [codeforcesRating, setCodeforcesRating] = useState("Loading...");
+
+  useEffect(() => {
+    let isMounted = true;
+
+    getCodeforcesRating()
+      .then((user) => {
+        if (isMounted) {
+          setCodeforcesRating(`Codeforces rating: ${user?.rating ?? "Unrated"}`);
+        }
+      })
+      .catch(() => {
+        if (isMounted) {
+          setCodeforcesRating("Codeforces rating: Unavailable");
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const achievements = [codeforcesRating, ...about.achievements];
 
   return (
     <section
@@ -88,7 +111,7 @@ export default function About() {
             Achievements
           </div>
           <ul className="flex flex-col gap-2 list-none">
-            {about.achievements.map((a, i) => (
+            {achievements.map((a, i) => (
               <li key={i} className="rounded-[8px] border border-[rgba(41,121,255,0.08)] bg-[rgba(41,121,255,0.04)] px-3 py-2 text-[0.875rem] leading-[1.5] text-[var(--text-secondary)]">
                 {a}
               </li>

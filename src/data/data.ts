@@ -4,26 +4,15 @@ import VersionControlSystemImg from "../assets/VCS.png";
 
 const handle = "rajamrit4a09";
 
-async function loadCodeforces() {
-  try {
+export async function getCodeforcesRating() {
     const response = await fetch(
-      `https://codeforces.com/api/user.info?handles=${handle}&checkHistoricHandles=false`,
+        `https://codeforces.com/api/user.info?handles=${handle}`
     );
 
     const data = await response.json();
 
-    if (data.status !== "OK") {
-      throw new Error("User not found");
-    }
-
-    return data;
-  } catch (error) {
-    console.error(error);
-  }
+    return data.result[0];
 }
-
-const data = await loadCodeforces();
-const rating = data?.result[0].rating;
 
 export const personal = {
   name: "Amrit Raj Yadav",
@@ -208,7 +197,6 @@ export const about = {
     },
   ],
   achievements: [
-    `Codeforces rating: ${rating}`,
     "Passed NDA and JEE",
     "Top 10 — College Ideathon 2026",
     "Completed React, Node.js, MySQL full-stack track",
