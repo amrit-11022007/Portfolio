@@ -26,12 +26,6 @@ export const navItems = [
   { id: "about", label: "About", icon: "A" },
   { id: "skills", label: "Skills", icon: "S" },
   { id: "contact", label: "Contact", icon: "C" },
-  {
-    id: "blogs",
-    label: "Blogs",
-    icon: "B",
-    external: "https://your-blog-link.com",
-  },
 ];
 
 export const projects = [

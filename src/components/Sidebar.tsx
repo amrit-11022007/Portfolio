@@ -59,7 +59,7 @@ export default function Sidebar({
           {navItems.map((item) => (
             <button
               key={item.id}
-              onClick={() => scrollTo(item.id, item.external)}
+              onClick={() => scrollTo(item.id)}
               className={`sidebar-nav-item w-full justify-start border-none bg-transparent ${
                 activeSection === item.id ? "active" : ""
               }`}

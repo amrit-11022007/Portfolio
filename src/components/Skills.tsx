@@ -13,7 +13,7 @@ export default function Skills() {
       ([entry]) => {
         if (entry.isIntersecting) el.classList.add("visible");
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     observer.observe(el);
@@ -29,10 +29,7 @@ export default function Skills() {
       {/* Decorative blob */}
       <div className="pointer-events-none absolute right-[-100px] top-[30%] h-[400px] w-[400px] rounded-full bg-[rgba(41,121,255,0.07)] blur-[70px]" />
 
-      <div
-        ref={sectionRef}
-        className="fade-up mb-14 max-w-[600px]"
-      >
+      <div ref={sectionRef} className="fade-up mb-14 max-w-[600px]">
         <h2 className="section-heading">
           Tech <span>Stack</span>
         </h2>
@@ -58,8 +55,7 @@ export default function Skills() {
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = "none";
 
-                const parent =
-                  (e.target as HTMLImageElement).parentElement!;
+                const parent = (e.target as HTMLImageElement).parentElement!;
 
                 const span = document.createElement("span");
 
@@ -87,7 +83,7 @@ export default function Skills() {
           </div>
 
           <p className="text-[0.825rem] leading-[1.7] text-[var(--text-muted)]">
-            DSA · Docker · AWS (deployment) · Postgre · Next.js
+            Prisma ORM · Postgre
           </p>
         </div>
       </div>
